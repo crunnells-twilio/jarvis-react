@@ -2,15 +2,6 @@ import React from "react";
 import TableRow from "./TableRow";
 import data from "./data/patient.json"
 
-
-const fetchSecretData = ()=> {
-    const URL = 'https://js-craft.io/secret_data.php'
-    const headers = { 'Authorization': 'secret_token' };
-    fetch(URL, {headers})
-        .then(response => response.json())
-        .then(data => setSecretData(data.data));
-}
-
 const Profile = () => {
     // once api endpoint is set, replace mydata = data to mydata = {}
     let mydata = data;
